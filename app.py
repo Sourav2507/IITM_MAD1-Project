@@ -6,7 +6,7 @@ def create_app():
     app=Flask(__name__)
 
     app.config['SECRET_KEY'] = 'IIT Madras'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://iitm_mad1_database_user:yv3aLHF3Ly1MBhhQwqkmXLLz67Me0BPh@dpg-d15f603uibrs73btv7sg-a/iitm_mad1_database'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db.init_app(app)
