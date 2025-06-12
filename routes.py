@@ -8,7 +8,7 @@ main = Blueprint('main',__name__)
 
 @main.route("/add_admin", methods=["GET"])
 def add_admin():
-    new_customer = Customer(name="admin1",username="admin1", email="admin1@gmail.com", password="admin1")
+    new_customer = Customer(name="admin1",username="admin1", email="admin1@gmail.com", password="admin1",admin_access=True)
     db.session.add(new_customer)
     db.session.commit()
     return render_template('login.html')
